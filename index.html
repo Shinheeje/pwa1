@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>IKEA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="javascript/main.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) { //서비스워커가 있을때
+        navigator.serviceWorker.register('sw.js')//등록
+        .then(function (success){
+          console.log("serviceworker 설치에 성공했습니다.!", success)
+        })
+        .catch(function (error){
+          console.log("serviceworker 설치에 실패했습니다.!", error)
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header_inner">
+        <a href="#" class="gnb"></a>
+        <div class="header_top">
+          <nav class="navbar d-flex flex-nowrap">
+            <div class="container-fluid justify-content-start">
+              <a href="#" class="navbar-brand header_logo"></a>
+              <form class="d-flex w-75 ms-4 header_form_pc" role="search">
+                <input class="form-control bg-light header_input_pc" type="search" placeholder="         What are you looking for?" aria-label="Search">
+                <a href="#" class="search_pc"><img src="img/search.svg" alt=""></a>
+                <a href="#" class="camera_pc"><img src="img/camera.svg" alt=""></a>
+              </form>
+              <a href="#" class="header_bottom_login">
+                <img src="img/person.svg" alt="">
+                <p>Hej! Log in or sign up</p>
+              </a>
+              <a href="#" class="heart"><img src="img/heart.svg" alt=""></a>
+              <a href="#" class="handbag"><img src="img/handbag.svg" alt=""></a>
+            </div>
+          </nav>
+          <form class="d-flex w-100 ms-4 header_form_mb" role="search">
+            <input class="form-control bg-light header_input_mb" type="search" placeholder="   What are you looking for?" aria-label="Search">
+            <a href="#" class="search_mb"><img src="img/search.svg" alt=""></a>
+            <a href="#" class="camera_mb"><img src="img/camera.svg" alt=""></a>
+          </form>
+          <div class="header_bottom container-fluid">
+            <ul class="header_bottom_left">
+              <li><a href="#">All Product</a></li>
+              <li><a href="#">Rooms</a></li>
+              <li><a href="#">Home Accessories</a></li>
+              <li><a href="#">Service</a></li>
+            </ul>
+            <ul class="header_bottom_right">
+              <li><a href="#"><img src="img/truck.svg" alt=""> &nbspEnter postal code</a></li>
+              <li><a href="#"><img src="img/shop.svg" alt=""> &nbspselect store</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="dark"></div>
+    <div class="tab_gnb_inner">
+      <div class="tab_gnb_content">
+        <a href="#" class="tab_gnb_content_close"></a>
+        <a href="#"><img src="img/ikea-logo.f7d9229f806b59ec64cb.svg" alt="" class="gnb_logo"></a>
+        <a href="#"><h2>All Products</h2></a>
+        <a href="#"><h2>Rooms</h2></a>
+        <a href="#"><h2>Home Accessories</h2></a>
+        <a href="#"><h2>Service</h2></a>
+        <div class="gnb_p">
+          <a href="#"><p>Offers</p></a>
+          <a href="#"><p>New</p></a>
+          <a href="#"><p>Ideas</p></a>
+          <a href="#"><p>Brand Campaign</p></a>
+          <a href="#"><p>What's on</p></a>
+        </div>
+        <div class="gnb_span">
+          <a href="#"><span>Stores</span></a>
+          <a href="#"><span>IKEA Family</span></a>
+          <a href="#"><span>IKEA for Business</span></a>
+          <a href="#"><span>Customer Service</span></a>
+          <a href="#"><span>Track Your Order</span></a>
+          <a href="#"><span>My profile</span></a>
+          <a href="#"><span>IKEA FESTIVAL</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb_gnb_inner">
+      <div class="mb_gnb_content">
+        <a href="#" class="tab_gnb_content_close"></a>
+        <a href="#"><img src="img/ikea-logo.f7d9229f806b59ec64cb.svg" alt="" class="gnb_logo"></a>
+        <a href="#"><h2>All Products</h2></a>
+        <a href="#"><h2>Rooms</h2></a>
+        <a href="#"><h2>Home Accessories</h2></a>
+        <a href="#"><h2>Service</h2></a>
+        <div class="gnb_p">
+          <a href="#"><p>Offers</p></a>
+          <a href="#"><p>New</p></a>
+          <a href="#"><p>Ideas</p></a>
+          <a href="#"><p>Brand Campaign</p></a>
+          <a href="#"><p>What's on</p></a>
+        </div>
+        <div class="gnb_span">
+          <a href="#"><span>Stores</span></a>
+          <a href="#"><span>IKEA Family</span></a>
+          <a href="#"><span>IKEA for Business</span></a>
+          <a href="#"><span>Customer Service</span></a>
+          <a href="#"><span>Track Your Order</span></a>
+          <a href="#"><span>My profile</span></a>
+          <a href="#"><span>IKEA FESTIVAL</span></a>
+        </div>
+      </div>
+    </div>
+    <!--header end-->
+    <main>
+      <div class="main_inner">
+        <section class="sec01">
+          <h1>Hej! Welcome back</h1>
+          <a href="#">Join IKEA Family</a>
+          <span>to get inspired, claim discounts, and receive rewards.</span>
+          <p>Recently viewed products</p>
+        </section>
+        <!--sec01 end-->
+
+        <section class="sec02">
+          <div class="sec02_content01">
+            <div class="sec02_content01_left">
+              <h2>Create a harmonious home</h2>
+              <p>The Symphony of the home, slow and stately, fast and lively. With the new IKEA products, make your home the ultimate space to both relax and have fun.</p>
+            </div>
+            <a href="#" class="more">View products</a>
+          </div>
+
+          <div class="sec02_content02">
+            <div class="sec02_content02_wrap">
+              <div class="sec02_img_container">
+                <div class="sec02_img1">
+                  <a href="#"><img src="img/sec02.avif" alt=""></a>
+                </div>
+                <div class="sec02_img2">
+                  <a href="#"><img src="img/PH187031-crop001.jpg" alt=""></a>
+                </div>
+                <div class="sec02_img3">
+                  <a href="#"><img src="img/PH187035-crop001.jpg" alt=""></a>
+                </div>
+                <div class="sec02_img4">
+                  <a href="#"><img src="img/PH187032-crop001.jpg" alt=""></a>
+                </div>
+                <div class="sec02_img5">
+                  <a href="#"><img src="img/PH187008.avif" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </section>
+        <!--sec02 end-->
+        
+        <section calss="sec03">
+          <div class="sec03_wrap">
+            <h2>What's new: A new folk tale</h2>
+            <div class="sec03_img_wrap">
+              <a href="#"><img src="img/sec03.avif" alt=""></a>
+              <div class="sec03_mention01">
+                <a href="#"><h3>NEW</h3></a>
+                <a href="#"><p>See EKVECKLARE and all new products</p></a>
+                <a href="#"><img src="img/arrow-right-short.svg" alt=""></a>
+              </div>
+
+              <!-- <div class="sec03_mention02">
+                <a href="#"><h3>NEW</h3></a>
+                <a href="#"><p>See EKVECKLARE and all new products</p></a>
+                <a href="#"><img src="img/arrow-right-short.svg" alt=""></a>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!--sec03 end-->
+        <section class="sec04">
+          <div class="sec04_wrap">
+            <h2>What's on</h2>
+            <div class="card-group row">
+              <div class="card sec04_content01_wrap me-3">
+                <img src="img/sec04_1.avif" class="card-img-top sec04_img1" alt="...">
+                <div class="card-body sec04_down1">
+                  <a href="#"><h3>Hej Halloween, trick or treat!</h3></a>
+                  <a href="#"><p>Discover spooky Halloween special menu at IKEA restaurant. Visit IKEA stores for more fun Halloween events until October 31st. </p></a>
+                  <a href="#" class="move res_move1"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="card sec04_content02_wrap me-3">
+                <img src="img/sec04_2.avif" class="card-img-top sec04_img2" alt="...">
+                <div class="card-body sec04_down2">
+                  <a href="#"><h3>Bring Christmas magic into your home</h3></a>
+                  <a href="#"><p>Let's get jolly with a little holiday magic for your home. </p></a>
+                  <a href="#" class="move res_move1"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="card sec04_content03_wrap">
+                <img src="img/sec04_3.avif" class="card-img-top sec04_img3" alt="...">
+                <div class="card-body sec04_down3">
+                  <a href="#"><h3>Bring the ocean home with the BLÅVINGAD collection</h3></a>
+                  <a href="#"><p>Inspired by children’s interest in the ocean, the BLÅVINGAD collection is designed to spark play and curiosity about the world’s largest habitat, from tots to tweens. </p></a>
+                  <a href="#" class="move res_move1"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section calss="sec04">
+          <div class="sec04_wrap">
+            <h2>What's on</h2>
+            <div class="sec04_content_wrap">
+              <div class="sec04_content01">
+                <a href="#"><img src="img/sec04_1.avif" alt=""></a>
+                <div class="sec04_content01_bottom">
+                  <a href="#"><h3>Hej Halloween, trick or treat!</h3></a>
+                  <a href="#"><p>Discover spooky Halloween special menu at IKEA restaurant. Visit IKEA stores for more fun Halloween events until October 31st. </p></a>
+                  <a href="#" class="move"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+              
+              <div class="sec04_content02">
+                <a href="#"><img src="img/sec04_2.avif" alt=""></a>
+                <div class="sec04_content02_bottom">
+                  <a href="#"><h3>Bring Christmas magic into your home</h3></a>
+                  <a href="#"><p>Let's get jolly with a little holiday magic for your home. </p></a>
+                  <a href="#" class="move"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="sec04_content03">
+                <a href="#"><img src="img/sec04_3.avif" alt=""></a>
+                <div class="sec04_content03_bottom">
+                  <a href="#"><h3>Bring Christmas magic into your home</h3></a>
+                  <a href="#"><p>Let's get jolly with a little holiday magic for your home. </p></a>
+                  <a href="#" class="move"><img src="img/arrow-right.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!--sec04 end-->
+
+        <section class="sec05">
+          <div class="sec05_wrap">
+            <div class="sec05_content01_left">
+              <h2>A fresh look for your floor</h2>
+              <p>With timeless, neutral tones and a playful pattern, this new rug adds light and calm to any room. The thickly-woven, durable material creates a super-soft texture your feet will thank you for.</p>
+              <a href="#" class="more1">See all rugs</a>
+            </div>
+            <div class="sec05_img_wrap row flex-nowrap">
+              <a href="#" class="col-6 me-3"><video src="video/20232-cvbot01a_video_web_clean.webm" autoplay muted loop></video></a>
+              <!-- <a href="#" class="col me-3"><img src="img/sec05_1.avif" alt=""></a> -->
+              <a href="#" class="col-6 ms-3"><img src="img/sec05_2.avif" alt=""></a>
+            </div>
+          </div>
+        </section>
+
+        <!--sec05 end-->
+
+        <section class="sec06">
+          <h2>IKEA Services</h2>
+          <div class="sec06_wrap">
+            <div class="sec06_content01">
+              <a href="#"><img src="img/sec06_1.avif" alt=""></a>
+              <a href="#" class="sec06_more1">Delivery Service</a>
+            </div>
+
+            <div class="sec06_content02">
+              <a href="#"><img src="img/sec06_2.avif" alt=""></a>
+              <a href="#" class="sec06_more2">Gas station pickup service</a>
+            </div>
+
+            <div class="sec06_content03">
+              <a href="#"><img src="img/sec06_3.avif" alt=""></a>
+              <a href="#" class="sec06_more3">Assembly service</a>
+            </div>
+
+            <div class="sec06_content04">
+              <a href="#"><img src="img/sec06_4.avif" alt=""></a>
+              <a href="#" class="sec06_more4">Kitchen Planning Service</a>
+            </div>
+          </div>
+        </section>
+                <!--sec06 end-->
+      </div>
+    </main>
+    <!--main end-->
+
+    <footer class="">
+      <div class="footer_wrap">
+        <div class="fotter_up">
+          <div class="footer_up_left">
+            <div class="footer_up_left01">
+              <h4>IKEA Family</h4>
+              <p>Bring your ideas to life with rewards, inspiration, discounts and a few surprises along the way.</p>
+              <a href="#" class="learn">Learn more</a>
+              <a href="#" class="footer_more">Join now</a>
+            </div>
+            <div class="footer_up_left02">
+              <h4>IKEA Business Network</h4>
+              <p>Enjoy the unique benefits to create a better life at work.</p>
+              <a href="#" class="learn">Learn more</a>
+              <a href="#" class="footer_more">Join now</a>
+            </div>
+          </div>
+  
+          <div class="footer_up_right">
+            <ul class="footer_up_right_con01">
+              <li><strong><p>Help</p></strong></li>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Delivery Tracking</a></li>
+              <li><a href="#">Returns and claims</a></li>
+              <li><a href="#">Guarantees</a></li>
+              <li><a href="#">Product Recalls</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Spare Parts</a></li>
+            </ul>
+            <ul class="footer_up_right_con02">
+              <li><strong><p>Shop</p></strong></li>
+              <li><a href="#">How to shop</a></li>
+              <li><a href="#">Phone Order</a></li>
+              <li><a href="#">IKEA for Business</a></li>
+              <li><a href="#">IKEA App</a></li>
+              <li><a href="#">Online Planning</a></li>
+              <li><a href="#">Product Tip/Guide</a></li>
+              <li><a href="#">Finance Option</a></li>
+              <li><a href="#">Gift Card</a></li>
+            </ul>
+            <ul class="footer_up_right_con03">
+              <li><strong><p>Services</p></strong></li>
+              <li><a href="#">IKEA All Services</a></li>
+              <li><a href="#">Delivery Service</a></li>
+              <li><a href="#">Assembly Service</a></li>
+              <li><a href="#">Planning Service</a></li>
+              <li><a href="#">Kitchen Planning Service</a></li>
+              <li><a href="#">Bathroom Service</a></li>
+              <li><a href="#">Buy back Service</a></li>
+            </ul>
+            <ul class="footer_up_right_con04">
+              <li><strong><p>This is IKEA</p></strong></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Life at Home</a></li>
+              <li><a href="#">Sustainable Everyday</a></li>
+              <li><a href="#">Good for me Good for my home</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Working at IKEA</a></li>
+            </ul>
+            
+            <div class="fotter_drop">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Help
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Customer Service</button></li>
+                  <li><button class="dropdown-item" type="button">FAQ</button></li>
+                  <li><button class="dropdown-item" type="button">Contact us</button></li>
+                  <li><button class="dropdown-item" type="button">Delivery Tracking</button></li>
+                  <li><button class="dropdown-item" type="button">Returns and claims</button></li>
+                  <li><button class="dropdown-item" type="button">Guarantees</button></li>
+                  <li><button class="dropdown-item" type="button">Product Recalls</button></li>
+                  <li><button class="dropdown-item" type="button">Feedback</button></li>
+                  <li><button class="dropdown-item" type="button">Spare Parts</button></li>
+                </ul>
+              </div>
+  
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">How to shop</button></li>
+                  <li><button class="dropdown-item" type="button">Phone Order</button></li>
+                  <li><button class="dropdown-item" type="button">IKEA for Business</button></li>
+                  <li><button class="dropdown-item" type="button">IKEA App</button></li>
+                  <li><button class="dropdown-item" type="button">Online Planning</button></li>
+                  <li><button class="dropdown-item" type="button">Product Tip/Guide</button></li>
+                  <li><button class="dropdown-item" type="button">Finance Option</button></li>
+                  <li><button class="dropdown-item" type="button">Gift Card</button></li>
+                </ul>
+              </div>
+  
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">IKEA All Services</button></li>
+                  <li><button class="dropdown-item" type="button">Delivery Service</button></li>
+                  <li><button class="dropdown-item" type="button">Assembly Service</button></li>
+                  <li><button class="dropdown-item" type="button">Planning Service</button></li>
+                  <li><button class="dropdown-item" type="button">Kitchen Planning Service</button></li>
+                  <li><button class="dropdown-item" type="button">Bathroom Service</button></li>
+                  <li><button class="dropdown-item" type="button">Buy back Service</button></li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  This is IKEA
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">About Us</button></li>
+                  <li><button class="dropdown-item" type="button">Life at Home</button></li>
+                  <li><button class="dropdown-item" type="button">Sustainable Everyday</button></li>
+                  <li><button class="dropdown-item" type="button">Good for me Good for my home</button></li>
+                  <li><button class="dropdown-item" type="button">Newsroom</button></li>
+                  <li><button class="dropdown-item" type="button">Working at IKEA</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fotter_down1">
+          <div class="fotter_down1_up1">
+            <p>© Inter IKEA Systems B.V. 1999-2022</p>
+          </div>
+          <div class="fotter_down1_up2">
+            <ul>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Cookie policy</a></li>
+              <li><a href="#">Cookie settings</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Responsible disclosure</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fotter_down2">
+          <p>IKEA KOREA</p>
+          <p>Address : 17 ILJIK-RO, GWANGMYEONG-SI, GYEONGGI-DO 14352</p>
+          <p>Company Registration Number : 106-86-82871<a href="#">BUSINESS INFO</a></p>
+          <p>Country Retail Manager : Fredrik Johansson</p>
+          <p>Telecommunication Services Registration Number. : 2018-경기광명-0209</p>
+          <p>TEL : 1670-4532</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

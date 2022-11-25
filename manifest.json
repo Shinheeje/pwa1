@@ -1,0 +1,54 @@
+{
+  "name" : "내가만든 IKEA",
+  "short_name" : "내가만든 IKEA",
+  "background_color": "#ffffff",
+  "description": "PWA연습용 페이지입니다 IKEA앱",
+  "dir": "auto",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [
+    {
+      "src": "images/screenshot1.png",
+      "sizes" : "416x885",
+      "type" : "image/png"
+    },
+    {
+      "src": "images/screenshot2.png",
+      "sizes" : "414x886",
+      "type" : "image/png"
+    },
+    {
+      "src": "images/screenshot3.png",
+      "sizes" : "414x888",
+      "type" : "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes" : "487x487",
+      "src" : "images/maskable_icon(1).png",
+      "type" : "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes" : "192x192",
+      "src" : "images/maskable_icon_x192(1).png",
+      "type" : "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes" : "48x48",
+      "src" : "images/maskable_icon_x48(1).png",
+      "type" : "image/png"
+    }
+  ],
+  "shortcuts": [],
+  "lang": "ko",
+  "gcm_sender_id" : "", 
+  "gcm_user_visible_only" : true
+}
