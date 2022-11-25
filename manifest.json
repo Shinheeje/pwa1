@@ -6,8 +6,8 @@
   "dir": "auto",
   "display": "standalone",
   "orientation": "any",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "https://shinheeje.github.io/pwa1/",
+  "start_url": "https://shinheeje.github.io/pwa1/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [
